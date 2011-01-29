@@ -277,14 +277,10 @@ class iScriba_API_Arguments extends iScriba_API_Object {
 		return $this->_build_uri_string($this->_values);
 	}
 	
-	private function _build_uri_string($data, $key = '') {
+	private function _build_uri_string($data) {
 		$return = array(); 
         
         foreach ((array) $data as $k => $v) {
-            if (( ! empty($key)) or ($key === 0)) {
-            	$k = $key .'['. rawurlencode($k) .']';
-            } 
-            
             if (is_array($v) or is_object($v)) { 
                 array_push($return, $k .'/'. rawurlencode(implode(':', $v))); 
             } else { 
