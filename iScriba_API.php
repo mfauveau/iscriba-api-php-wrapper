@@ -296,7 +296,7 @@ class iScriba_API_Arguments extends iScriba_API_Object {
  * iScriba API defines the methods available to the API
  *
  * <code>
- * require('iscriba.php');
+ * require('iScriba_API.php');
  *
  * $api = new iScriba_API($username, $password, $subdomain);
  * </code>
