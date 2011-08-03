@@ -255,7 +255,7 @@ class iScriba_API_Fields extends iScriba_API_Object {
 			}
 
 			if (is_array($v) or is_object($v)) {
-				array_push($return, $this->_build_post($v, $k));
+				array_push($return, $this->_build_post_fields($v, $k));
 			} else {
 				array_push($return, $k .'='. rawurlencode($v));
 			}
